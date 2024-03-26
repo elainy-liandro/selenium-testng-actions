@@ -1,0 +1,35 @@
+name: Web automated testing with Selenium, TestNG, and GitHub Actions
+run-name: Pipeline Selenium
+on:
+  pull_request:
+  push: { branches: [master] }
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Chrome
+        uses: nanasess/setup-chromedriver@v2.2.2
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Run test
+        run: mvn clean test -DsuiteFile=testng.xml -Dbrowser=chrome
+
+      - name: Upload Test Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact
+          path: /home/runner/work/selenium-testng-actions/selenium-testng-actions/target/selenium-testng-actions-*.jar
+
+      - name: Upload Test Logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs
+          path: |
+            /home/runner/work/selenium-testng-actions/selenium-testng-actions/target/surefire-reports/emailable-report.html
