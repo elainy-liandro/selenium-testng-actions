@@ -25,11 +25,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: artifact
-          path: /home/runner/work/selenium-testng-actions/selenium-testng-actions/target/selenium-testng-actions-*.jar
+          path: /home/runner/work/selenium-testng-actions/selenium-testng-actions/target/screenshots/*.jpg
 
       - name: Upload Test Logs
         uses: actions/upload-artifact@v4
         with:
           name: logs
-          path: |
-            /home/runner/work/selenium-testng-actions/selenium-testng-actions/target/surefire-reports/emailable-report.html
+          path: /home/runner/work/selenium-testng-actions/selenium-testng-actions/target/surefire-reports/emailable-report.html
