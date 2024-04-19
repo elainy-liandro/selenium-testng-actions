@@ -1,24 +1,15 @@
 package org.liandro.elainy.tests;
 
-import org.jetbrains.annotations.NotNull;
 import org.liandro.elainy.pages.PageObjectFactory;
 import org.liandro.elainy.pages.objects.*;
 import org.liandro.elainy.utils.Driver;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.IClass;
-import org.testng.ITestContext;
-import org.testng.ITestNGMethod;
-import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.File;
-import java.io.IOException;
-import java.sql.Timestamp;
-import java.util.Set;
 
 import static org.liandro.elainy.listeners.Screenshots.log;
 import static org.liandro.elainy.utils.Driver.getDriver;

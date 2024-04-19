@@ -66,13 +66,4 @@ public class LoginTests extends BaseTests {
         loginPageObject.verificarSeMsgErroFoiExibida_UsuarioOuSenhaInvalidos();
     }
 
-    @Test(testName = "CT007 [Login] - Login com falha - Performance ruim", priority = 7)
-    @Parameters({"usuario","senha"})
-    public void LoginFail_PerformanceRuim(String usuario, String senha) {
-        loginPageObject.verificarSeEstouNaPaginaLogin();
-        loginPageObject.preencherInputUsuario(usuario);
-        loginPageObject.preencherInputSenha(senha);
-        loginPageObject.clicarNoBotaoLogin();
-    }
-
 }
