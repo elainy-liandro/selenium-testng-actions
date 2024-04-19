@@ -25,6 +25,10 @@
                         <parameter name="usuario" value="standard_user"/>
                         <parameter name="senha" value="secret_sauce123"/>
                     </include>
+                    <include name="LoginFail_PerformanceRuim">
+                        <parameter name="usuario" value="performance_glitch_user"/>
+                        <parameter name="senha" value="secret_sauce"/>
+                    </include>
                 </methods>
             </class>
         </classes>

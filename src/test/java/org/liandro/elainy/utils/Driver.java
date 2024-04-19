@@ -27,7 +27,7 @@ public class Driver {
         switch (browser) {
             case "CHROME":
                 ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("headless");
+                //chromeOptions.addArguments("headless");
                 driver = new ChromeDriver(chromeOptions);
                 driver.manage().window().maximize();
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(SHORT_TIMEOUT));

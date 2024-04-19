@@ -5,6 +5,8 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import java.io.StringWriter;
+
 public class OrderTests extends BaseTests {
 
     public void passosIniciais(String usuario, String senha) {
